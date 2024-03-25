@@ -1,10 +1,10 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from "firebase/auth";
-import { FIREBASE_API } from "./constants";
+
 
 const firebaseConfig = {
-    apiKey: FIREBASE_API,
+    apiKey: import.meta.env.VITE_API_KEY,
     authDomain: "taskmanagement-e15f3.firebaseapp.com",
     projectId: "taskmanagement-e15f3",
     storageBucket: "taskmanagement-e15f3.appspot.com",
