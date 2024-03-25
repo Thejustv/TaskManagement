@@ -3,7 +3,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
@@ -12,6 +12,7 @@ import Box from '@mui/material/Box';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
+
 
 function SignIn() {
   const [name, setName] = useState('');
@@ -93,8 +94,8 @@ function SignIn() {
           </Button>
           <Grid container>
             <Grid item>
-              <Link to={"/signup"} variant="body2">
-                {"Don't have an account? Sign Up"}
+              <Link to={'/signup'}>
+                <p className='underline decoration-blue-500  decoration-solid text-blue-600 text-sm'>Don't have an account? Sign Up</p>
               </Link>
             </Grid>
           </Grid>
